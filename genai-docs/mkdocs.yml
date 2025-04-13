@@ -5,7 +5,9 @@ theme:
     primary: indigo
     accent: indigo
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Examples: examples.md
-  - API Reference: api.md
+- Foundations:
+  - Introduction: foundations/intro.md
+  - LLMs: foundations/LLMs.md
+  - Prompt Engineering Basics: foundations/prompt_engineering.md
+  - Tools Overview: foundations/tools_overview.md
+  
