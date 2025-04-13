@@ -9,7 +9,7 @@ LLMs are deep learning models trained on massive amounts of text data to **under
 - **BERT (Bidirectional Encoder Representations from Transformers)** – Text understanding, sentiment analysis.
 - **T5 (Text-to-Text Transfer Transformer)** – Multi-task text generation and transformation.
 
-
+---
 # Vectors
 In machine learning and AI, a **vector** is a list (or array) of **numerical values**. These numbers represent a **point** in a multi-dimensional space.
 
