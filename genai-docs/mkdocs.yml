@@ -10,4 +10,5 @@ nav:
   - LLMs: foundations/LLMs.md
   - Prompt Engineering Basics: foundations/prompt_engineering.md
   - Tools Overview: foundations/tools_overview.md
-  
+
+home: foundations/intro.md
