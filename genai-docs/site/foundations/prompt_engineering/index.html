@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#prompt-engineering-basics" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -289,6 +294,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Prompt Engineering Basics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -301,6 +321,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zero-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero-shot Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-shot Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#few-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Few-shot Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Chaining
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -354,6 +429,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zero-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero-shot Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      One-shot Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#few-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Few-shot Prompting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Chaining
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -369,9 +490,67 @@
 
 
 
-  <h1>Prompt Engineering Basics</h1>
-
-
+<h1 id="prompt-engineering-basics">Prompt Engineering Basics</h1>
+<h2 id="zero-shot-prompting">Zero-shot Prompting</h2>
+<p>Ask the model to perform a task with <strong>no examples</strong>.</p>
+<ul>
+<li>
+<p><strong>Example</strong>:<br />
+  "Write a Python function to sort a list of integers."</p>
+</li>
+<li>
+<p><strong>Why it's useful</strong>:<br />
+  Good for simple, well-understood tasks where the model can rely on its pretraining.</p>
+</li>
+</ul>
+<h2 id="one-shot-prompting">One-shot Prompting</h2>
+<p>Provide <strong>one example</strong> to guide the model's behavior.</p>
+<ul>
+<li>
+<p><strong>Example</strong>:<br />
+  "Convert a Python list to a JSON string.<br />
+  Input: [1, 2, 3]<br />
+  Output: '[1, 2, 3]'<br />
+  Input: ['a', 'b', 'c']<br />
+  Output:"</p>
+</li>
+<li>
+<p><strong>Why it's useful</strong>:<br />
+  Clarifies the expected input-output format, especially when ambiguity exists.</p>
+</li>
+</ul>
+<h2 id="few-shot-prompting">Few-shot Prompting</h2>
+<p>Provide <strong>2–5 examples</strong> to show the pattern clearly.</p>
+<ul>
+<li>
+<p><strong>Example</strong>:<br />
+  "Convert a Python snippet to equivalent JavaScript.<br />
+  Python: <code>print('Hello')</code><br />
+  JS: <code>console.log('Hello');</code><br />
+  Python: <code>len([1,2,3])</code><br />
+  JS: <code>[1,2,3].length</code><br />
+  Python: <code>range(5)</code><br />
+  JS:"</p>
+</li>
+<li>
+<p><strong>Why it's useful</strong>:<br />
+  Boosts accuracy by showing consistent translation logic across multiple examples.</p>
+</li>
+</ul>
+<h2 id="prompt-chaining">Prompt Chaining</h2>
+<p>Break down a complex task into <strong>smaller sub-prompts</strong>, passing output from one step to the next.</p>
+<ul>
+<li><strong>Example</strong>: Generating API documentation</li>
+<li>Prompt 1: "Summarize what this FastAPI function does."</li>
+<li>Prompt 2: "Generate an OpenAPI description from the summary."</li>
+<li>
+<p>Prompt 3: "Convert OpenAPI to Markdown format."</p>
+</li>
+<li>
+<p><strong>Why it's useful</strong>:<br />
+  Keeps each step focused and manageable. Helps reduce hallucination and improves control over complex workflows.</p>
+</li>
+</ul>
 
 
 
