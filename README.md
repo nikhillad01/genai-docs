@@ -41,8 +41,6 @@ The output will be in the `site/` directory.
 
 ## 🌐 Deploy
 
-Live site [GitHub Pages](https://nikhillad01.github.io/genai-docs/).
+[Live site](https://nikhillad01.github.io/genai-docs/).
 
 ---
-
-Feel free to explore, fork, or contribute!
