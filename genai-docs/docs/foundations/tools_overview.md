@@ -105,7 +105,7 @@ Here are the main components of LlamaIndex:
 
 #### Use Case: Internal Knowledge Base for a Company
 
-##### **Scenario:**
+**Scenario:**
 You're building an internal app for a company that allows employees to query and get instant answers based on the company's documentation, knowledge base, product manuals, and other internal resources (e.g., HR policies, code documentation). The system should **automatically retrieve the most relevant information** and **generate responses** using the context from that data.
 
 ##### **How LlamaIndex Helps:**
@@ -211,15 +211,56 @@ Vector DBs store **embeddings** (numerical representations of text/code) and all
 
 ### Common Vector DBs
 
-#### FAISS
+**FAISS**
+
 - Developed by Facebook.
 - Fast, runs locally, no cloud needed.
 - Best for local dev and prototyping.
 
-#### Chroma
+**Chroma**
+
 - Open-source, Python-native, easy to integrate with LangChain.
 - Supports persistence (saves data across sessions).
 
-#### Pinecone
+**Pinecone**
+
 - Fully managed, scalable, and production-ready.
 - Great for apps with large-scale retrieval (millions of records).
+
+### How Vector DBs are different from SQL/NoSQL DBs
+
+Traditional databases (SQL or NoSQL) store and query **structured data** using exact matches, filters, and joins.
+
+- Example:  
+  Find all users where `role = 'admin'` or `created_at > 2024-01-01`.
+
+Vector databases store and query **unstructured data** (text, code, images) using **embeddings** and **semantic similarity**.
+
+- Example:  
+  Find the doc chunk most similar in meaning to: “How does user login work?”
+
+| Feature            | SQL / NoSQL DB         | Vector DB                     |
+|--------------------|------------------------|-------------------------------|
+| Data Type          | Structured (rows, docs)| Unstructured (text, code)     |
+| Query Type         | Exact match, filter     | Similarity search             |
+| Use Case           | CRUD apps, reports     | LLMs, semantic search         |
+| Indexing           | Columns, fields         | Embedding vectors             |
+
+---
+
+### Do You Need Both Databases?
+
+Yes — in most real-world LLM apps, you often use **both**:
+
+1. **Traditional DB**:  
+   Store user profiles, logs, metadata, preferences, etc.
+
+2. **Vector DB**:  
+   Store embeddings of documents, messages, or code for semantic retrieval.
+
+- **Example App**: AI Assistant for your company:
+
+    - **SQL DB**: Stores users, chat history, permissions.
+    - **Vector DB**: Stores indexed knowledge base, technical docs, internal wikis.
+
+So they serve **different roles**, and together enable powerful, intelligent apps.
