@@ -449,15 +449,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#how-llamaindex-helps" class="md-nav__link">
     <span class="md-ellipsis">
       How LlamaIndex Helps:
@@ -540,38 +531,23 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Vector DBs">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#faiss" class="md-nav__link">
+  <a href="#how-vector-dbs-are-different-from-sqlnosql-dbs" class="md-nav__link">
     <span class="md-ellipsis">
-      FAISS
+      How Vector DBs are different from SQL/NoSQL DBs
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#chroma" class="md-nav__link">
+  <a href="#do-you-need-both-databases" class="md-nav__link">
     <span class="md-ellipsis">
-      Chroma
+      Do You Need Both Databases?
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pinecone" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pinecone
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -713,15 +689,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scenario:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#how-llamaindex-helps" class="md-nav__link">
     <span class="md-ellipsis">
       How LlamaIndex Helps:
@@ -804,38 +771,23 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Vector DBs">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#faiss" class="md-nav__link">
+  <a href="#how-vector-dbs-are-different-from-sqlnosql-dbs" class="md-nav__link">
     <span class="md-ellipsis">
-      FAISS
+      How Vector DBs are different from SQL/NoSQL DBs
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#chroma" class="md-nav__link">
+  <a href="#do-you-need-both-databases" class="md-nav__link">
     <span class="md-ellipsis">
-      Chroma
+      Do You Need Both Databases?
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pinecone" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pinecone
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -947,8 +899,8 @@
 </ul>
 <h3 id="llamaindex-for-building-company-apps">LlamaIndex for Building Company Apps</h3>
 <h4 id="use-case-internal-knowledge-base-for-a-company">Use Case: Internal Knowledge Base for a Company</h4>
-<h5 id="scenario"><strong>Scenario:</strong></h5>
-<p>You're building an internal app for a company that allows employees to query and get instant answers based on the company's documentation, knowledge base, product manuals, and other internal resources (e.g., HR policies, code documentation). The system should <strong>automatically retrieve the most relevant information</strong> and <strong>generate responses</strong> using the context from that data.</p>
+<p><strong>Scenario:</strong>
+You're building an internal app for a company that allows employees to query and get instant answers based on the company's documentation, knowledge base, product manuals, and other internal resources (e.g., HR policies, code documentation). The system should <strong>automatically retrieve the most relevant information</strong> and <strong>generate responses</strong> using the context from that data.</p>
 <h5 id="how-llamaindex-helps"><strong>How LlamaIndex Helps:</strong></h5>
 <p>LlamaIndex simplifies the process of <strong>indexing</strong> and <strong>retrieving</strong> information from the company's data sources, which can then be combined with an LLM (like GPT) to <strong>generate context-aware responses</strong>. Here's how:</p>
 <hr />
@@ -1054,22 +1006,85 @@
 </li>
 </ul>
 <h3 id="common-vector-dbs">Common Vector DBs</h3>
-<h4 id="faiss">FAISS</h4>
+<p><strong>FAISS</strong></p>
 <ul>
 <li>Developed by Facebook.</li>
 <li>Fast, runs locally, no cloud needed.</li>
 <li>Best for local dev and prototyping.</li>
 </ul>
-<h4 id="chroma">Chroma</h4>
+<p><strong>Chroma</strong></p>
 <ul>
 <li>Open-source, Python-native, easy to integrate with LangChain.</li>
 <li>Supports persistence (saves data across sessions).</li>
 </ul>
-<h4 id="pinecone">Pinecone</h4>
+<p><strong>Pinecone</strong></p>
 <ul>
 <li>Fully managed, scalable, and production-ready.</li>
 <li>Great for apps with large-scale retrieval (millions of records).</li>
 </ul>
+<h3 id="how-vector-dbs-are-different-from-sqlnosql-dbs">How Vector DBs are different from SQL/NoSQL DBs</h3>
+<p>Traditional databases (SQL or NoSQL) store and query <strong>structured data</strong> using exact matches, filters, and joins.</p>
+<ul>
+<li>Example:<br />
+  Find all users where <code>role = 'admin'</code> or <code>created_at &gt; 2024-01-01</code>.</li>
+</ul>
+<p>Vector databases store and query <strong>unstructured data</strong> (text, code, images) using <strong>embeddings</strong> and <strong>semantic similarity</strong>.</p>
+<ul>
+<li>Example:<br />
+  Find the doc chunk most similar in meaning to: “How does user login work?”</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>SQL / NoSQL DB</th>
+<th>Vector DB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Type</td>
+<td>Structured (rows, docs)</td>
+<td>Unstructured (text, code)</td>
+</tr>
+<tr>
+<td>Query Type</td>
+<td>Exact match, filter</td>
+<td>Similarity search</td>
+</tr>
+<tr>
+<td>Use Case</td>
+<td>CRUD apps, reports</td>
+<td>LLMs, semantic search</td>
+</tr>
+<tr>
+<td>Indexing</td>
+<td>Columns, fields</td>
+<td>Embedding vectors</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="do-you-need-both-databases">Do You Need Both Databases?</h3>
+<p>Yes — in most real-world LLM apps, you often use <strong>both</strong>:</p>
+<ol>
+<li>
+<p><strong>Traditional DB</strong>:<br />
+   Store user profiles, logs, metadata, preferences, etc.</p>
+</li>
+<li>
+<p><strong>Vector DB</strong>:<br />
+   Store embeddings of documents, messages, or code for semantic retrieval.</p>
+</li>
+<li>
+<p><strong>Example App</strong>: AI Assistant for your company:</p>
+<ul>
+<li><strong>SQL DB</strong>: Stores users, chat history, permissions.</li>
+<li><strong>Vector DB</strong>: Stores indexed knowledge base, technical docs, internal wikis.</li>
+</ul>
+</li>
+</ol>
+<p>So they serve <strong>different roles</strong>, and together enable powerful, intelligent apps.</p>
 
 
 
