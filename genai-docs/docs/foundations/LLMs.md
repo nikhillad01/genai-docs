@@ -108,3 +108,33 @@ Transformers are crucial because they handle long-range dependencies in text and
 - **Popular Transformers**:
     - **GPT**: Focuses on autoregressive text generation.
     - **BERT**: Focuses on bidirectional context understanding.
+
+---
+
+# Semantic Search
+
+Semantic search finds results based on **meaning**, not just keywords. It uses **embeddings** (vectors) to compare the intent behind a query and stored content.
+
+- **Why we need it**:  
+  Traditional search (SQL or keyword-based) only matches exact words. Semantic search finds the most **relevant** content even if the exact words don't match.
+
+---
+
+## Example
+
+User query: `"How do users log in?"`  
+Semantic search can match this with docs containing:
+- "User authentication flow"
+- "OAuth login handler"
+- "Sign-in endpoint in API"
+
+Even though the words differ, the **meaning** is close.
+
+---
+
+## How it works (high-level):
+1. Convert the query and documents into embeddings (vectors).
+2. Use a **Vector DB** to find content with the most similar vectors.
+3. Pass those results to the LLM to generate the final answer.
+
+---

@@ -469,6 +469,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantic Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works-high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works (high-level):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -714,6 +747,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#semantic-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantic Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works-high-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works (high-level):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -837,6 +903,29 @@ Transformers are crucial because they handle long-range dependencies in text and
 </ul>
 </li>
 </ul>
+<hr />
+<h1 id="semantic-search">Semantic Search</h1>
+<p>Semantic search finds results based on <strong>meaning</strong>, not just keywords. It uses <strong>embeddings</strong> (vectors) to compare the intent behind a query and stored content.</p>
+<ul>
+<li><strong>Why we need it</strong>:<br />
+  Traditional search (SQL or keyword-based) only matches exact words. Semantic search finds the most <strong>relevant</strong> content even if the exact words don't match.</li>
+</ul>
+<hr />
+<h2 id="example">Example</h2>
+<p>User query: <code>"How do users log in?"</code><br />
+Semantic search can match this with docs containing:
+- "User authentication flow"
+- "OAuth login handler"
+- "Sign-in endpoint in API"</p>
+<p>Even though the words differ, the <strong>meaning</strong> is close.</p>
+<hr />
+<h2 id="how-it-works-high-level">How it works (high-level):</h2>
+<ol>
+<li>Convert the query and documents into embeddings (vectors).</li>
+<li>Use a <strong>Vector DB</strong> to find content with the most similar vectors.</li>
+<li>Pass those results to the LLM to generate the final answer.</li>
+</ol>
+<hr />
 
 
 
